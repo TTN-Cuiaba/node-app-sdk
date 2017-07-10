@@ -5,7 +5,7 @@
 [include]
 
 [libs]
-types
+flow-typed
 
 [options]
 

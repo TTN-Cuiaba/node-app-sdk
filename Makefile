@@ -77,4 +77,10 @@ type-deps:
 	$(log) "installing type definitions"
 	@$(FLOW_TYPED) install
 
+not_flowtyped = grep -v './flow-typed'
 
+JS_FILES ?= $(ALL_FILES) | $(only_js) | $(not_flowtyped)
+JS_STAGED_FILES = $(STAGED_FILES) | $(only_js) | $(not_flowtyped)
+
+l:
+	echo $(JS_FILES)
